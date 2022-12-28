@@ -2,13 +2,13 @@
 
 ## What is it?
 
-Fstpy is a high level interface to rpn's rpnpy python library that
+Fstd2pandas is a high level interface to rpn's rpnpy python library that
 produces pandas dataframes or Xarray's from CMC standard files. In
 order to promote decoupling, modularization and collaboration, fstpy
 only reads and writes. All other operations and algorithms can be
 independent.
 
-## Fstpy philosophy
+## Fstd2pandas philosophy
 
 The idea of using a dataframe is to have a pythonic way of working with
 standard files without having to know the mechanics of rmnlib. Since
@@ -63,39 +63,18 @@ a great variety of built-in plotting functions.
 -   jupyterlab>=3.1.13
 -   myst-parser>=0.15.2
 
-## CMDS Py39
 
-This is an ssm package that we use at CMC on the science network and
-that contains a wide variety of packages
-
-``` bash
-. ssmuse-sh -p /fs/ssm/eccc/cmd/cmds/env/python/py39_2022.09.29_all
-```
 
 # Installation
 
-Use the ssm package
-
-    . ssmuse-sh -d /fs/ssm/eccc/cmd/cmds/fstpy/202206/
-
 Use the git repository package: at your own risk ;)
 
-    python3 -m pip install git+http://gitlab.science.gc.ca/CMDS/fstpy.git
+    python3 -m pip install git+https://github.com/sebastiendfortier/fstd2pandas.git
 
-## Using fstpy in scripts or Jupyter Lab/Notebook
+## Using Fstd2pandas in scripts or Jupyter Lab/Notebook
 
-### Use pre-built developpement environment
 
-``` bash
-# use CMDS Py39      
-. ssmuse-sh -p /fs/ssm/eccc/cmd/cmds/env/python/py39_2022.09.29_all     
-# get rmn python library      
-. r.load.dot eccc/mrd/rpn/MIG/ENV/migdep/5.1.1 eccc/mrd/rpn/MIG/ENV/rpnpy/2.1-u2.4      
-# get fstpy ssm package
-. ssmuse-sh -d /fs/ssm/eccc/cmd/cmds/fstpy/202206/
-```
-
-### Use fstpy
+### Use Fstd2pandas
 
 ``` python
 # inside your script    
@@ -123,60 +102,7 @@ dest_path = '/tmp/out.std'
 fstpy.StandardFileWriter(dest_path,just_tt_and_uv).to_fst()    
 ```
 
-# Contributing
 
-## Getting the source code
-
-``` bash
-git clone git@gitlab.science.gc.ca:cmds/fstpy.git
-# create a new branch
-git checkout -b my_change
-# modify the code
-# commit your changes
-# fetch changes
-git fetch
-# merge recent master
-git merge origin/master
-# push your changes
-git push my_change
-```
-
-Then create a merge request on science\'s gitlab
-<https://gitlab.science.gc.ca/CMDS/fstpy/merge_requests>
-
-## Using setup.sh to setup your developpement environment
-
-``` bash
-# From the $project_root directory of the project
-source setup.sh
-```
-
-## Testing
-
-``` bash
-# Use CMDS Py39
-. ssmuse-sh -p /fs/ssm/eccc/cmd/cmds/env/python/py39_2022.09.29_all
-# get rmn python library      
-. r.load.dot eccc/mrd/rpn/MIG/ENV/migdep/5.1.1 eccc/mrd/rpn/MIG/ENV/rpnpy/2.1-u2.4     
-# From the $project_root/test directory of the project
-python -m pytest -vrf
-```
-
-## Building documentation
-
-``` bash
-# This will build documentation in docs/build and there you will find index.html 
-cd doc
-make clean    
-make doc
-```
-
-# Creating the ssm package
-
-From \$PROJECT~ROOT~
-
-    cd ssm
-    ./make_ssm_package.ssh
 
 # Acknowledgements
 
