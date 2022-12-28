@@ -2,20 +2,20 @@
 # Copyright 2017-2021 - Climate Research Division
 #                       Environment and Climate Change Canada
 #
-# This file is part of the "fstd2nc" package.
+# This file is part of the "fstd2pandas" package.
 #
-# "fstd2nc" is free software: you can redistribute it and/or modify
+# "fstd2pandas" is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# "fstd2nc" is distributed in the hope that it will be useful,
+# "fstd2pandas" is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU Lesser General Public License for more details.
 #
 # You should have received a copy of the GNU Lesser General Public License
-# along with "fstd2nc".  If not, see <http://www.gnu.org/licenses/>.
+# along with "fstd2pandas".  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
 from setuptools import setup, find_packages
@@ -43,7 +43,7 @@ setup (
   ],
   packages = find_packages(),
   setup_requires = ['pip >= 8.1'],
-  install_requires = ['numpy >= 1.13.0, != 1.15.3','fstd2nc','fstd2nc-deps >= 0.20200304.0'],
+  install_requires = ['pandas >= 1.2.4, 'numpy >= 1.19.5','fstd2nc', 'xarray >= 0.19.0', 'dask >= 2021.8.0', 'fstd2nc-deps >= 0.20200304.0'],
   extras_require = {
     'manyfiles': ['pandas'],
     'array': ['xarray>=0.10.3','dask'],
