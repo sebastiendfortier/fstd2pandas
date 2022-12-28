@@ -46,10 +46,10 @@ setup (
   install_requires = ['pandas >= 1.2.4, 'numpy >= 1.19.5','fstd2nc', 'xarray >= 0.19.0', 'dask >= 2021.8.0', 'fstd2nc-deps >= 0.20200304.0'],
   extras_require = {
     'manyfiles': ['pandas'],
-    'array': ['xarray>=0.10.3','dask'],
+    'array': ['xarray>=0.19.0','dask>=2021.8.0'],
   },
   package_data = {
-    'fstd2nc': ['locale/*/LC_MESSAGES/fstd2nc.mo'],
+    'fstpy': ['csv/*'],
   },
   entry_points={
     'console_scripts': [
