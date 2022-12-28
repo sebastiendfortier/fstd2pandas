@@ -45,18 +45,7 @@ setup (
   packages = find_packages(),
   setup_requires = ['pip >= 8.1'],
   install_requires = ['pandas >= 1.2.4', 'numpy >= 1.19.5','fstd2nc', 'xarray >= 0.19.0', 'dask >= 2021.8.0', 'fstd2nc-deps >= 0.20200304.0'],
-  extras_require = {
-    'manyfiles': ['pandas'],
-    'array': ['xarray>=0.19.0','dask>=2021.8.0'],
-  },
   package_data = {
     'fstpy': ['csv/*'],
   },
-  entry_points={
-    'console_scripts': [
-      'fstd2nc = fstd2nc.__main__:_fstd2nc_cmdline_trapped',
-      'fstdump = fstd2nc.__main__:_fstdump',
-    ],
-  },
-
 )
