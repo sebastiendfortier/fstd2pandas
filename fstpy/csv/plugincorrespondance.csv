@@ -1,0 +1,8 @@
+nomvar,plugin_name
+UV,WindModulus
+RE,WindChill
+ES,DewPointDepression
+KI,GeorgeKIndex
+HMX,Humidex
+SVP,SaturationVapourPressure
+TD,TemperatureDewPoint

@@ -1,0 +1,11 @@
+label,kind,follow_topography,surface
+METER_SEA_LEVEL,0,0,np.nan
+SIGMA,1,1,1.0
+MILLIBARS,2,0,np.nan
+ARBITRARY_CODE,3,0,np.nan
+METER_GROUND_LEVEL,4,1,0.0@5.0
+HYBRID,5,1,1.0
+THETA,6,0,np.nan
+MILLIBARS_NEW,12,0,np.nan
+INDEX,13,0,np.nan
+NUMBER,100,0,np.nan

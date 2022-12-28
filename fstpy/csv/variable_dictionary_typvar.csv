@@ -1,0 +1,22 @@
+nomtype,usage,short_fr_desc,short_en_desc
+A,current,Analyse,Analysis
+C,current,Climatologie,Climatology
+D,current,Données brutes aux stations,Raw Station data
+E,current,Erreur mensuelle,Monthly Error
+F,current,Filtré,Filtered
+I,current,Interpolé,Interpolated
+K,current,Constantes variées,Various Constants
+M,current,Modifications multiples,Multiple modifications
+M,current,Matrice de vérification (Table contingente),Verification Matrix Contigency Table
+O,current,Observation,Observation
+P,current,Prévision,Forecast
+Q,current,QPF diagnostique,Diagnostic QPF
+R,current,Incrément d'analyse,Analysis increment
+S,current,Scores divers,Various scores
+T,current,Série temporelle,Time Serie
+U,current,Unités converties,Unit converted
+X,current,Divers,Various
+Z,current,Zappé,Zapped
+!,current,Variable modifiée par son 'ETIKET',Variable modified by its 'ETIKET'
+B,current,Borné,Bounded
+@,current,Masque,Mask
