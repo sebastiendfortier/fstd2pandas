@@ -46,25 +46,6 @@ a great variety of built-in plotting functions.
 -   xarray>=0.19.0
 -   dask>=2021.8.0
 
-## developpement packages
-
--   ci_fstcomp>=1.0.6
--   pandas>=1.2.4
--   numpy>=1.19.5
--   xarray>=0.19.0
--   dask>=2021.8.0
--   pytest>=5.3.5
--   Sphinx>=3.4.3
--   sphinx-autodoc-typehints>=1.12.0
--   sphinx-gallery>=0.9.0
--   sphinx-rtd-theme>=1.0.0
--   nbsphinx>=0.8.7
--   ipython>=7.12.0
--   jupyterlab>=3.1.13
--   myst-parser>=0.15.2
-
-
-
 # Installation
 
 Use the git repository package: at your own risk ;)
