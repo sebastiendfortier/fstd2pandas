@@ -19,7 +19,8 @@
 ###############################################################################
 
 from setuptools import setup, find_packages
-from fstpy import __version__
+with open("fstpy/VERSION",'r') as f:
+  __version__ = f.readline().strip()
 
 with open("README.md","r") as f:
   long_description = f.read()
