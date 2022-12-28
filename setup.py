@@ -19,20 +19,19 @@
 ###############################################################################
 
 from setuptools import setup, find_packages
-from fstd2nc import __version__
+from fstpy import __version__
 
 with open("README.md","r") as f:
   long_description = f.read()
 
 setup (
-  name="fstd2nc",
+  name="fstd2pandas",
   version=__version__,
-  description = 'Converts RPN standard files (from Environment Canada) to netCDF files.',
+  description = 'Converts RPN standard files (from Environment Canada) to pandas dataframes',
   long_description = long_description,
-  # https://stackoverflow.com/a/26737258/9947646
   long_description_content_type='text/markdown',
-  url = 'https://github.com/neishm/fstd2nc',
-  author="Mike Neish",
+  url = 'https://github.com/sebastiendfortier/fstd2pandas',
+  author="Sebastien Fortier",
   license = 'LGPL-3',
   classifiers = [
     'Development Status :: 3 - Alpha',
@@ -44,12 +43,10 @@ setup (
   ],
   packages = find_packages(),
   setup_requires = ['pip >= 8.1'],
-  install_requires = ['numpy >= 1.13.0, != 1.15.3','netcdf4','fstd2nc-deps >= 0.20200304.0','progress'],
+  install_requires = ['numpy >= 1.13.0, != 1.15.3','fstd2nc','fstd2nc-deps >= 0.20200304.0'],
   extras_require = {
     'manyfiles': ['pandas'],
-    'array': ['xarray>=0.10.3','dask','toolz'],
-    'iris': ['iris>=2.0','xarray>=0.10.3','dask','toolz'],
-    'pygeode': ['pygeode>=1.2.2','xarray>=0.10.3','dask','toolz'],
+    'array': ['xarray>=0.10.3','dask'],
   },
   package_data = {
     'fstd2nc': ['locale/*/LC_MESSAGES/fstd2nc.mo'],
