@@ -1,6 +1,5 @@
 ###############################################################################
-# Copyright 2017-2021 - Climate Research Division
-#                       Environment and Climate Change Canada
+# Copyright 2017-2022 - Environment and Climate Change Canada
 #
 # This file is part of the "fstd2pandas" package.
 #
@@ -19,7 +18,8 @@
 ###############################################################################
 
 from setuptools import setup, find_packages
-from fstpy import __version__
+with open("fstpy/VERSION",'r') as f:
+  __version__ = f.readline().strip()
 
 with open("README.md","r") as f:
   long_description = f.read()
@@ -43,19 +43,8 @@ setup (
   ],
   packages = find_packages(),
   setup_requires = ['pip >= 8.1'],
-  install_requires = ['pandas >= 1.2.4, 'numpy >= 1.19.5','fstd2nc', 'xarray >= 0.19.0', 'dask >= 2021.8.0', 'fstd2nc-deps >= 0.20200304.0'],
-  extras_require = {
-    'manyfiles': ['pandas'],
-    'array': ['xarray>=0.19.0','dask>=2021.8.0'],
-  },
+  install_requires = ['pandas >= 1.2.4', 'numpy >= 1.19.5','fstd2nc', 'xarray >= 0.19.0', 'dask >= 2021.8.0', 'fstd2nc-deps >= 0.20200304.0'],
   package_data = {
     'fstpy': ['csv/*'],
   },
-  entry_points={
-    'console_scripts': [
-      'fstd2nc = fstd2nc.__main__:_fstd2nc_cmdline_trapped',
-      'fstdump = fstd2nc.__main__:_fstdump',
-    ],
-  },
-
 )
